@@ -17,7 +17,7 @@ class WorkspaceSerializer(serializers.ModelSerializer):
     owner_details=UserSerializer(read_only=True, source='owner')
     class Meta:
         model = workspace
-        fields=['id','name','description','owner','owner_details','created_at']git
+        fields=['id','name','description','owner','owner_details','created_at']
         read_only_fields=['owner_details']
 
 class TaskSerializer(serializers.ModelSerializer):
